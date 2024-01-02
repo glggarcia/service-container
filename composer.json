@@ -1,0 +1,17 @@
+{
+    "name": "glggarcia/modulo-5",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Glggarcia\\Modulo5\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Garcia"
+        }
+    ],
+    "require": {
+        "psr/container": "^2.0"
+    }
+}
