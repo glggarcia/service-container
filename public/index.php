@@ -10,12 +10,10 @@ require __DIR__ . "/../vendor/autoload.php";
 
 $container = new Container();
 $container->register(PaymentProviderContract::class, PaddlePaymentProvider::class);
+
 try {
-//    $paymentProvider = $container->get(PaddlePaymentProvider::class);
     $paymentProvider = $container->get(PaymentProviderContract::class);
-} catch (ReflectionException $e) {
-}
-$service = new Checkout('glggarcia2013@gmail.com', 450);
+} catch (ReflectionException $e) {}
 
-
+$service = new Checkout('teste@teste.com', 450);
 echo $service->handle($paymentProvider);
